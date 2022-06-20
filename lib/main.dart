@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0.0,
         backgroundColor: Color(0xff55879f),
         title: Text(
-          'Telegram',
+          'Telegram 11',
           style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
         ),
