@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:telegram_1/telegram2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 11, 37, 58),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xff55879f),
@@ -62,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       CircleAvatar(
                         radius: 30,
-                        backgroundImage: ExactAssetImage('/images/pov2.jpg'),
+                        backgroundImage: ExactAssetImage('/images/popp11.jpeg'),
                       ),
                       SizedBox(
                         height: 20,
@@ -109,7 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: InkWell(
+      body: GestureDetector(
+        onTap: (() {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => mainig2()));
+        }),
         child: ListTile(
           contentPadding: EdgeInsets.only(top: 5, left: 10),
           leading: CircleAvatar(
@@ -123,11 +131,17 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text(
                   'Эмирлан',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 19,
+                      color: Colors.white),
                 ),
                 Text(
                   '21:24pm',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                      color: Colors.white),
                 )
               ],
             ),
@@ -139,10 +153,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text(
                   'Ассалоомуу алейкуум',
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500, color: Colors.white),
                 ),
                 Container(
-                  child: Text('1'),
+                  child: Text('1', style: TextStyle(color: Colors.white)),
                   decoration: BoxDecoration(
                       border: Border.all(width: 1),
                       borderRadius: BorderRadius.circular(50),
